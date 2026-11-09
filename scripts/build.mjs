@@ -192,7 +192,7 @@ function about() {
     <section class="about-row" aria-labelledby="education-heading"><h2 id="education-heading">Education</h2>
       <div>${site.education.map(x => `<div class="education-entry"><div><h3>${e(x.school)}</h3><p>${e(x.degree)}</p></div><span>${e(x.dates)}</span></div>`).join('')}</div>
     </section>
-    <section class="about-row" aria-labelledby="recognition-heading"><h2 id="recognition-heading">Selected recognition</h2>
+    <section class="about-row" aria-labelledby="recognition-heading"><h2 id="recognition-heading">Photography recognition</h2>
       <ol class="recognition-list">${site.recognition.map(r => `<li><span class="recognition-year">${r.year}</span><div><h3>${r.url ? `<a href="${e(r.url)}" target="_blank" rel="noopener noreferrer">${e(r.title)} ${arrowIcon()}<span class="sr-only"> (opens in a new tab)</span></a>` : e(r.title)}</h3><p>${e(r.organization)} · ${e(r.detail)}</p></div></li>`).join('')}</ol>
     </section>
     <section id="contact" class="about-row contact" aria-labelledby="contact-heading"><h2 id="contact-heading">Contact</h2>
