@@ -118,14 +118,14 @@ function card(work, { lead = false, highlight = false, opening = false } = {}) {
 }
 function home() {
   return layout({ title: site.title, body: `<main id="main" class="container home">
-    <section aria-label="Selected work" class="selected-work">
+    <section aria-label="Featured Photography" class="selected-work">
       <div class="lead-pair">${featured.slice(0, 2).map((w, i) => card(w, { lead: i === 0, highlight: true, opening: true })).join('\n')}</div>
-      <div class="section-label"><h2>Selected Work</h2><span>${String(featured.length).padStart(2, '0')} works</span></div>
+      <div class="section-label"><h2>Featured Photography</h2><span>${String(featured.length).padStart(2, '0')} Photographs</span></div>
       <div class="featured-grid">${featured.slice(2).map(w => card(w, { highlight: true })).join('\n')}</div>
     </section>
     <section id="more-work" aria-labelledby="more-heading" class="more-work">
-      <div class="more-heading"><h2 id="more-heading">More Work</h2>
-        <div class="filters" role="group" aria-label="Filter more work" hidden>
+      <div class="more-heading"><h2 id="more-heading">Explore More</h2>
+        <div class="filters" role="group" aria-label="Explore More" hidden>
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           ${Object.entries(site.categories).filter(([key]) => more.some(w => w.primaryCategory === key)).map(([key, name]) =>
             `<button type="button" data-filter="${e(key)}" aria-pressed="false">${e(name)}</button>`).join('')}
