@@ -55,7 +55,7 @@ function header(active) {
   <header class="site-header container">
     <a class="wordmark" href="${url()}" aria-label="Andi Lin — home">Andi Lin</a>
     <nav aria-label="Main navigation">
-      <a href="${url()}"${active === 'work' ? ' aria-current="page"' : ''}>Work</a>
+      <a href="${url()}"${active === 'work' ? ' aria-current="page"' : ''}>Photographs</a>
       <a href="${url('about/')}"${active === 'about' ? ' aria-current="page"' : ''}>About</a>
       <a href="${url('about/#contact')}">Contact</a>
     </nav>
@@ -186,13 +186,13 @@ function about() {
   return layout({ title: 'About — Andi Lin', path: 'about/', active: 'about', body: `
   <main id="main" class="container about-page">
     <section class="about-intro" aria-labelledby="about-heading">
-      <div><p class="eyebrow">About</p><h1 id="about-heading">Youyuan<br>(Andi) Lin</h1><p class="about-role">Photography & architecture</p></div>
+      <div><h1 id="about-heading">Youyuan<br>(Andi) Lin</h1></div>
       <div class="biography">${site.biography.map(p => `<p>${e(p)}</p>`).join('')}</div>
     </section>
     <section class="about-row" aria-labelledby="education-heading"><h2 id="education-heading">Education</h2>
       <div>${site.education.map(x => `<div class="education-entry"><div><h3>${e(x.school)}</h3><p>${e(x.degree)}</p></div><span>${e(x.dates)}</span></div>`).join('')}</div>
     </section>
-    <section class="about-row" aria-labelledby="recognition-heading"><h2 id="recognition-heading">Photography recognition</h2>
+    <section class="about-row" aria-labelledby="recognition-heading"><h2 id="recognition-heading">Photography Recognition</h2>
       <ol class="recognition-list">${site.recognition.map(r => `<li><span class="recognition-year">${r.year}</span><div><h3>${r.url ? `<a href="${e(r.url)}" target="_blank" rel="noopener noreferrer">${e(r.title)} ${arrowIcon()}<span class="sr-only"> (opens in a new tab)</span></a>` : e(r.title)}</h3><p>${e(r.organization)} · ${e(r.detail)}</p></div></li>`).join('')}</ol>
     </section>
     <section id="contact" class="about-row contact" aria-labelledby="contact-heading"><h2 id="contact-heading">Contact</h2>

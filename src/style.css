@@ -91,7 +91,7 @@ h1, h2, h3, strong { font-weight: 400; }
 .biography { font-size: 18px; line-height: 1.75; max-width: 660px; }
 .biography p + p { margin-top: 22px; }
 .about-row { display: grid; grid-template-columns: 1fr 1.45fr; gap: 80px; border-top: 1px solid var(--line); padding-block: 38px 50px; }
-.about-row > h2 { font-size: 15px; line-height: 1.6; }
+.about-row > h2 { font-size: 15px; line-height: 1.6; font-weight: 570; }
 .education-entry { display: flex; justify-content: space-between; gap: 24px; }
 .education-entry + .education-entry { margin-top: 30px; }
 .education-entry h3, .recognition-list h3 { font-size: 15px; line-height: 1.5; }
